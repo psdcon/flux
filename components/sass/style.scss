@@ -42,8 +42,21 @@ $lighterPurple :  #f1eef7;
 }
 
 // The images to the left of the lists
+.icon.inview{
+    transform: translateX(0px);
+    opacity: 1;
+}
 .icon{
     position: absolute;
+    -webkit-transition: all 0.6s ease-out;
+    -moz-transition: all 0.6s ease-out;
+    -o-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+
+    // When page loads, icon starts 100px more 
+    // left that it will finish when animated
+    transform: translateX(-100px);
+    opacity: 0;
 
     img{
         height: 64px;
@@ -52,29 +65,56 @@ $lighterPurple :  #f1eef7;
     }
 
     &:after{
+        // add line to right of icon. 
+        //Length (width) depends on even or odd
         content: "";
         position: absolute;
-        width: 5px; /*Depends*/
         height: 1px;
-        background: #bebbba;
+        width: 0;
+        background: #bebbba; //gray
         left: 70px;
         top: 10px;
+        -webkit-transition: all 0.6s ease-out;
+        -moz-transition: all 0.6s ease-out;
+        -o-transition: all 0.6s ease-out;
+        transition: all 0.6s ease-out;
     }
+
 }
 // Even icons are further away from list
-.even .icon{
-    left: -200px;
-    
-    &:after{
+.even {
+    .icon{
+        left: -200px;
+    }
+    // When jQuery says item is in view, que transition
+    .inview.icon:after{
         width: 140px; 
     }
 }
-.odd .icon{
-    left: -100px;
-
-    &:after{
-        width: 39px; 
+.odd {
+    .icon{
+        left: -100px;
     }
+    .inview.icon:after{
+        width: 39px;
+    }
+}
+
+.comexImage{
+    opacity: 0;
+    width: 50%;
+    padding-left:75%;
+
+    -webkit-transition: all 0.9s ease-out;
+    -moz-transition: all 0.9s ease-out;
+    -o-transition: all 0.9s ease-out;
+    transition: all 0.9s ease-out;
+}
+
+.inview.comexImage{
+    opacity: 1;
+    width: 90%;
+    padding-left:0;
 }
 
 // At bottom of page
