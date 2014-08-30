@@ -15,7 +15,7 @@
 
 /* line 18, ../components/sass/style.scss */
 .flux-banner {
-  background: url("../images/background.png") center;
+  background: url("../images/background.png") no-repeat center;
   background-size: 100% 100%;
 }
 
@@ -115,7 +115,7 @@
 /* line 114, ../components/sass/style.scss */
 .inview.comexImage {
   opacity: 1;
-  width: 90%;
+  width: 80%;
   padding-left: 0;
 }
 
