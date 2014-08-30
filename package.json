@@ -1,0 +1,19 @@
+{
+  "name": "flux",
+  "version": "0.0.1",
+  "description": "Flux brouchure website",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Paul Connolly",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-util": "^2.2.14",
+    "gulp-compass": "^1.1.9",
+    "gulp-connect": "^2.0.5",
+    "gulp-if": "^1.1.0",
+    "gulp-uglify": "^0.3.0",
+    "gulp-minify-html": "^0.1.3"
+  }
+}

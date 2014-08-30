@@ -1,0 +1,100 @@
+/* line 1, ../components/sass/style.scss */
+.outline {
+  border: 2px solid black;
+}
+
+/* line 4, ../components/sass/style.scss */
+.outline-red {
+  border: 2px solid red;
+}
+
+/* line 7, ../components/sass/style.scss */
+.outline-blue {
+  border: 2px solid blue;
+}
+
+/* line 10, ../components/sass/style.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* line 13, ../components/sass/style.scss */
+.odd {
+  background-color: #d4c8e3;
+}
+
+/* line 16, ../components/sass/style.scss */
+.even {
+  background-color: #f1eef7;
+}
+
+/* line 19, ../components/sass/style.scss */
+.table {
+  border: 1px solid white;
+  padding: 8px;
+  margin: 0;
+}
+
+/* line 25, ../components/sass/style.scss */
+.icon {
+  position: absolute;
+}
+
+/* line 28, ../components/sass/style.scss */
+.even .icon {
+  left: -200px;
+}
+
+/* line 31, ../components/sass/style.scss */
+.odd .icon {
+  left: -100px;
+}
+
+/* line 34, ../components/sass/style.scss */
+.even .icon:after {
+  width: 140px;
+}
+
+/* line 37, ../components/sass/style.scss */
+.odd .icon:after {
+  width: 39px;
+}
+
+/* line 40, ../components/sass/style.scss */
+.icon img {
+  height: 64px;
+  position: absolute;
+  top: -22px;
+}
+
+/* line 45, ../components/sass/style.scss */
+.icon:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  /*Depends*/
+  height: 1px;
+  background: #bebbba;
+  left: 70px;
+  top: 10px;
+}
+
+/* line 54, ../components/sass/style.scss */
+.feature {
+  width: 140px;
+  display: inline-block;
+  font-size: 0.9em;
+  padding-right: 30px;
+  padding-top: 10px;
+}
+
+/* line 61, ../components/sass/style.scss */
+.feature img {
+  width: 60px;
+}
+
+/* line 64, ../components/sass/style.scss */
+.feature hr {
+  border: 1px solid #682c91;
+  margin: 10px 0 10px 0;
+}

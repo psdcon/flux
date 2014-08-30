@@ -1,0 +1,67 @@
+.outline{
+            border:2px solid black;
+        }
+        .outline-red{
+            border:2px solid red;
+        }
+        .outline-blue{
+            border:2px solid blue;
+        }
+        .uppercase{
+            text-transform: uppercase;
+        }
+        .odd{
+            background-color: #d4c8e3;
+        }
+        .even{
+            background-color: #f1eef7;
+        }
+        .table{
+            border: 1px solid white;
+            padding: 8px;
+            margin: 0;
+        }
+
+        .icon{
+            position: absolute;
+        }
+        .even .icon{
+            left: -200px;
+        }
+        .odd .icon{
+            left: -100px;
+        }
+        .even .icon:after{
+            width: 140px; 
+        }
+        .odd .icon:after{
+            width: 39px; 
+        }
+        .icon img{
+            height: 64px;
+            position: absolute;
+            top: -22px;
+        }
+        .icon:after{
+            content: "";
+            position: absolute;
+            width: 5px; /*Depends*/
+            height: 1px;
+            background: #bebbba;
+            left: 70px;
+            top: 10px;
+        }
+        .feature{
+            width:140px;
+            display:inline-block;
+            font-size:0.9em;
+            padding-right: 30px;
+            padding-top: 10px;
+        }
+        .feature img{
+            width: 60px;
+        }
+        .feature hr{
+            border:1px solid #682c91;
+            margin:10px 0 10px 0;
+        }
