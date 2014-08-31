@@ -163,7 +163,7 @@
 /* line 152, ../components/sass/style.scss */
 .comexImage {
   opacity: 0;
-  width: 50%;
+  width: 80%;
   max-width: 500px;
   -webkit-transition: all 0.9s ease-out;
           transition: all 0.9s ease-out;
@@ -172,10 +172,9 @@
 /* line 160, ../components/sass/style.scss */
 .inview.comexImage {
   opacity: 1;
-  width: 80%;
 }
 
-/* line 166, ../components/sass/style.scss */
+/* line 165, ../components/sass/style.scss */
 .feature {
   width: 140px;
   display: inline-block;
@@ -184,17 +183,17 @@
   padding-top: 10px;
   vertical-align: top;
 }
-/* line 174, ../components/sass/style.scss */
+/* line 173, ../components/sass/style.scss */
 .feature img {
   width: 60px;
 }
-/* line 177, ../components/sass/style.scss */
+/* line 176, ../components/sass/style.scss */
 .feature hr {
   border-top: 1px solid #682c91;
   margin: 10px 0 10px 0;
 }
 @media (max-width: 335px) {
-  /* line 166, ../components/sass/style.scss */
+  /* line 165, ../components/sass/style.scss */
   .feature {
     padding-right: 10px;
     width: 120px;

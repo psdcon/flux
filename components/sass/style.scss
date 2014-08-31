@@ -151,15 +151,14 @@ $tabletWidth   :  768px;
 //Grows larger and opacity changes when in view
 .comexImage{
     opacity: 0;
-    width: 50%;
+    width: 80%;
     max-width: 500px;
-    
+
     transition: all 0.9s ease-out;
 }
 
 .inview.comexImage{
     opacity: 1;
-    width: 80%;
 }
 
 // At bottom of page
