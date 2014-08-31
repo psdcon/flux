@@ -46,80 +46,76 @@ $tabletWidth   :  768px;
 
 // The images to the left of the lists
 .icon{
-    position: absolute;
+    display: inline;
     transition: all 0.6s ease-out;
 
     // When page loads, icon starts 100px more 
     // left that it will finish when animated
     transform: translateX(-100px);
     opacity: 0;
-
+    
     img{
-        height: 64px;
+        height: 2em;
+        padding-right: 1em;
+    }        
+
+    @media (min-width:$tabletWidth){
         position: absolute;
-        top: -22px;
-    }
-
-    &:after{
-        // add line to right of icon. 
-        //Length (width) depends on even or odd
-        content: "";
-        position: absolute;
-        height: 1px;
-        width: 0;
-        background: #bebbba; //gray
-        left: 70px;
-        top: 10px;
-
-        transition: all 0.6s ease-out;
-    }
-
-    @media (max-width:$tabletWidth){
-        position: relative;
-        display: inline;
+        
         img{
-            height: 2em;
-            position: relative;
-            top: 0;
-            padding-right: 1em;
+            position: absolute;
+            top: -22px;
+            height: 64px;
+            padding-right:0;
+        }
+
+        &:after{
+            // Add line to right of icon. 
+            // Length (width) depends on even or odd
+            position: absolute;
+            top: 10px;
+            left: 70px;
+            width: 0;
+            height: 1px;
+            background: #bebbba; //gray
+            content: "";
+            transition: all 0.6s ease-out;
         }
     }
 
 }
-.icon.inview{ // case icons to animate in
+.icon.inview{ // cause icons to transition in from right
     transform: translateX(0px);
     opacity: 1;
 }
 // Even icons are further away from list
 .even {
     .icon{
-        left: -200px;
-        @media (max-width:$tabletWidth){
-            left: 0;
+        left: 0;
+        @media (min-width: $tabletWidth){
+            left: -200px;
         }
     }
     // When jQuery says item is in view, que transition
     // to extend line out of icon
     .inview.icon:after{
-        width: 140px; 
-        @media (max-width:$tabletWidth){
-            width: 0;
+        @media (min-width: $tabletWidth){
+            width: 140px;
         }
     }
 }
 .odd {
     .icon{
-        left: -100px;
-        @media (max-width:$tabletWidth){
-            left: 0;
+        left: 0;
+        @media (min-width: $tabletWidth){
+            left: -100px;
         }
     }
     // When jQuery says item is in view, que transition
     // to extend line out of icon
     .inview.icon:after{
-        width: 39px;
-        @media (max-width:$tabletWidth){
-            width: 0;
+        @media (min-width: $tabletWidth){
+            width: 39px;
         }
     }
 }
@@ -127,33 +123,36 @@ $tabletWidth   :  768px;
 // Big purple box
 // Each of four images fades in
 .diagram{
-    margin-top:3em;
     height:510px;
-    background:#d4c8e3;
+    margin-top:3em;
     text-align: center;
+    background:#d4c8e3;
 
     img{
+        max-width: 100%;
+        height: 20%;
         padding-top:    8px;
         padding-bottom: 8px;
-        height: 20%;
-        max-width: 100%;
 
         opacity: 0;
-
         transition: all 0.6s ease-out;
     }
     img.inview {
-        opacity: 1;
+        // .diagram is hidden on mobile
+        // Only animate when element is displayed
+        @media (min-width: $tabletWidth){
+            opacity: 1;
+        }
     }
 }
 
 // Image for comex case study. 
 //Grows larger and opacity changes when in view
 .comexImage{
-    opacity: 0;
     width: 80%;
     max-width: 500px;
 
+    opacity: 0;
     transition: all 0.9s ease-out;
 }
 
@@ -163,23 +162,23 @@ $tabletWidth   :  768px;
 
 // At bottom of page
 .feature{
-    width:140px;
     display:inline-block;
-    font-size:0.9em;
-    padding-right: 30px;
-    padding-top: 10px;
     vertical-align: top;
+    width: 120px;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-size:0.9em;    
     
     img{
         width: 60px;
     }
     hr{
-        border-top:1px solid #682c91;
+        border-top:1px solid $purple;
         margin:10px 0 10px 0;
     }
-
-    @media (max-width:335px) {
-        padding-right: 10px;
-        width: 120px;
+    // Add spacing on larger screen
+    @media (min-width:335px) {
+        width:140px;
+        padding-right: 30px;
     }
 }
