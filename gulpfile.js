@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     uglify = require('gulp-uglify'),
     gulpif = require('gulp-if'),
+    prefix = require('gulp-autoprefixer'),
     minifyHTML = require('gulp-minify-html');
 
 var env,
@@ -33,6 +34,7 @@ gulp.task('compass', function() {
       style: sassStyle
     })
     .on('error', gutil.log))
+    .pipe(prefix())
     .pipe(gulp.dest(outputDir + 'css'))
     .pipe(connect.reload());
 });

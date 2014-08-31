@@ -48,20 +48,17 @@
 /* line 48, ../components/sass/style.scss */
 .icon {
   position: absolute;
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
   transform: translateX(-100px);
   opacity: 0;
 }
-/* line 60, ../components/sass/style.scss */
+/* line 57, ../components/sass/style.scss */
 .icon img {
   height: 64px;
   position: absolute;
   top: -22px;
 }
-/* line 66, ../components/sass/style.scss */
+/* line 63, ../components/sass/style.scss */
 .icon:after {
   content: "";
   position: absolute;
@@ -70,9 +67,6 @@
   background: #bebbba;
   left: 70px;
   top: 10px;
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
 }
 @media (max-width: 768px) {
@@ -81,7 +75,7 @@
     position: relative;
     display: inline;
   }
-  /* line 85, ../components/sass/style.scss */
+  /* line 80, ../components/sass/style.scss */
   .icon img {
     height: 2em;
     position: relative;
@@ -90,96 +84,90 @@
   }
 }
 
-/* line 94, ../components/sass/style.scss */
+/* line 89, ../components/sass/style.scss */
 .icon.inview {
   transform: translateX(0px);
   opacity: 1;
 }
 
-/* line 100, ../components/sass/style.scss */
+/* line 95, ../components/sass/style.scss */
 .even .icon {
   left: -200px;
 }
 @media (max-width: 768px) {
-  /* line 100, ../components/sass/style.scss */
+  /* line 95, ../components/sass/style.scss */
   .even .icon {
     left: 0;
   }
 }
-/* line 108, ../components/sass/style.scss */
+/* line 103, ../components/sass/style.scss */
 .even .inview.icon:after {
   width: 140px;
 }
 @media (max-width: 768px) {
-  /* line 108, ../components/sass/style.scss */
+  /* line 103, ../components/sass/style.scss */
   .even .inview.icon:after {
     width: 0;
   }
 }
 
-/* line 116, ../components/sass/style.scss */
+/* line 111, ../components/sass/style.scss */
 .odd .icon {
   left: -100px;
 }
 @media (max-width: 768px) {
-  /* line 116, ../components/sass/style.scss */
+  /* line 111, ../components/sass/style.scss */
   .odd .icon {
     left: 0;
   }
 }
-/* line 124, ../components/sass/style.scss */
+/* line 119, ../components/sass/style.scss */
 .odd .inview.icon:after {
   width: 39px;
 }
 @media (max-width: 768px) {
-  /* line 124, ../components/sass/style.scss */
+  /* line 119, ../components/sass/style.scss */
   .odd .inview.icon:after {
     width: 0;
   }
 }
 
-/* line 134, ../components/sass/style.scss */
+/* line 129, ../components/sass/style.scss */
 .diagram {
   margin-top: 3em;
   height: 510px;
   background: #d4c8e3;
   text-align: center;
 }
-/* line 140, ../components/sass/style.scss */
+/* line 135, ../components/sass/style.scss */
 .diagram img {
   padding-top: 8px;
   padding-bottom: 8px;
   height: 20%;
   max-width: 100%;
   opacity: 0;
-  -webkit-transition: all 0.6s ease-out;
-  -moz-transition: all 0.6s ease-out;
-  -o-transition: all 0.6s ease-out;
   transition: all 0.6s ease-out;
 }
-/* line 153, ../components/sass/style.scss */
+/* line 145, ../components/sass/style.scss */
 .diagram img.inview {
   opacity: 1;
 }
 
-/* line 160, ../components/sass/style.scss */
+/* line 152, ../components/sass/style.scss */
 .comexImage {
   opacity: 0;
   width: 50%;
   max-width: 500px;
-  -webkit-transition: all 0.9s ease-out;
-  -moz-transition: all 0.9s ease-out;
-  -o-transition: all 0.9s ease-out;
   transition: all 0.9s ease-out;
 }
 
-/* line 171, ../components/sass/style.scss */
+/* line 160, ../components/sass/style.scss */
 .inview.comexImage {
   opacity: 1;
   width: 80%;
 }
 
-/* line 177, ../components/sass/style.scss */
+/* line 166, ../components/sass/style.scss */
 .feature {
   width: 140px;
   display: inline-block;
@@ -188,17 +176,17 @@
   padding-top: 10px;
   vertical-align: top;
 }
-/* line 185, ../components/sass/style.scss */
+/* line 174, ../components/sass/style.scss */
 .feature img {
   width: 60px;
 }
-/* line 188, ../components/sass/style.scss */
+/* line 177, ../components/sass/style.scss */
 .feature hr {
   border-top: 1px solid #682c91;
   margin: 10px 0 10px 0;
 }
 @media (max-width: 335px) {
-  /* line 177, ../components/sass/style.scss */
+  /* line 166, ../components/sass/style.scss */
   .feature {
     padding-right: 10px;
     width: 120px;

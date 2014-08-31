@@ -47,9 +47,6 @@ $tabletWidth   :  768px;
 // The images to the left of the lists
 .icon{
     position: absolute;
-    -webkit-transition: all 0.6s ease-out;
-    -moz-transition: all 0.6s ease-out;
-    -o-transition: all 0.6s ease-out;
     transition: all 0.6s ease-out;
 
     // When page loads, icon starts 100px more 
@@ -73,9 +70,7 @@ $tabletWidth   :  768px;
         background: #bebbba; //gray
         left: 70px;
         top: 10px;
-        -webkit-transition: all 0.6s ease-out;
-        -moz-transition: all 0.6s ease-out;
-        -o-transition: all 0.6s ease-out;
+
         transition: all 0.6s ease-out;
     }
 
@@ -145,9 +140,6 @@ $tabletWidth   :  768px;
 
         opacity: 0;
 
-        -webkit-transition: all 0.6s ease-out;
-        -moz-transition: all 0.6s ease-out;
-        -o-transition: all 0.6s ease-out;
         transition: all 0.6s ease-out;
     }
     img.inview {
@@ -161,10 +153,7 @@ $tabletWidth   :  768px;
     opacity: 0;
     width: 50%;
     max-width: 500px;
-
-    -webkit-transition: all 0.9s ease-out;
-    -moz-transition: all 0.9s ease-out;
-    -o-transition: all 0.9s ease-out;
+    
     transition: all 0.9s ease-out;
 }
 
