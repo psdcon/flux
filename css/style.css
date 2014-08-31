@@ -1,75 +1,61 @@
-/* line 3, ../components/sass/style.scss */
-.outline {
-  border: 2px solid black;
-}
-
-/* line 6, ../components/sass/style.scss */
-.outline-red {
-  border: 2px solid red;
-}
-
-/* line 9, ../components/sass/style.scss */
-.outline-blue {
-  border: 2px solid blue;
-}
-
-/* line 19, ../components/sass/style.scss */
+/* line 8, ../components/sass/style.scss */
 .flux-banner {
   background: url("../images/background.png") no-repeat center;
   background-size: 100% 100%;
 }
 
-/* line 25, ../components/sass/style.scss */
+/* line 14, ../components/sass/style.scss */
 .uppercase {
   text-transform: uppercase;
 }
 
-/* line 28, ../components/sass/style.scss */
+/* line 17, ../components/sass/style.scss */
 .purple {
   color: #682c91;
 }
 
-/* line 38, ../components/sass/style.scss */
+/* line 27, ../components/sass/style.scss */
 .odd {
   background-color: #d4c8e3;
-  border: 1px solid white;
-  padding: 8px;
   margin: 0;
+  padding: 8px;
+  border: 1px solid white;
 }
 
-/* line 42, ../components/sass/style.scss */
+/* line 31, ../components/sass/style.scss */
 .even {
   background-color: #f1eef7;
-  border: 1px solid white;
-  padding: 8px;
   margin: 0;
+  padding: 8px;
+  border: 1px solid white;
 }
 
-/* line 48, ../components/sass/style.scss */
+/* line 37, ../components/sass/style.scss */
 .icon {
-  display: inline;
+  display: inline-block;
+  vertical-align: top;
   transition: all 0.6s ease-out;
   transform: translateX(-100px);
   opacity: 0;
 }
-/* line 57, ../components/sass/style.scss */
+/* line 47, ../components/sass/style.scss */
 .icon img {
   height: 2em;
   padding-right: 1em;
 }
 @media (min-width: 768px) {
-  /* line 48, ../components/sass/style.scss */
+  /* line 37, ../components/sass/style.scss */
   .icon {
     position: absolute;
   }
-  /* line 65, ../components/sass/style.scss */
+  /* line 55, ../components/sass/style.scss */
   .icon img {
     position: absolute;
     top: -22px;
     height: 64px;
     padding-right: 0;
   }
-  /* line 72, ../components/sass/style.scss */
+  /* line 62, ../components/sass/style.scss */
   .icon:after {
     position: absolute;
     top: 10px;
@@ -82,54 +68,60 @@
   }
 }
 
-/* line 87, ../components/sass/style.scss */
-.icon.inview {
+/* line 77, ../components/sass/style.scss */
+.inview-icon {
   transform: translateX(0px);
   opacity: 1;
 }
 
-/* line 93, ../components/sass/style.scss */
+/* line 83, ../components/sass/style.scss */
+.odd span, .even span {
+  display: inline-block;
+  width: 80%;
+}
+
+/* line 89, ../components/sass/style.scss */
 .even .icon {
   left: 0;
 }
 @media (min-width: 768px) {
-  /* line 93, ../components/sass/style.scss */
+  /* line 89, ../components/sass/style.scss */
   .even .icon {
     left: -200px;
   }
 }
 @media (min-width: 768px) {
-  /* line 101, ../components/sass/style.scss */
-  .even .inview.icon:after {
+  /* line 97, ../components/sass/style.scss */
+  .even .inview-icon:after {
     width: 140px;
   }
 }
 
-/* line 108, ../components/sass/style.scss */
+/* line 104, ../components/sass/style.scss */
 .odd .icon {
   left: 0;
 }
 @media (min-width: 768px) {
-  /* line 108, ../components/sass/style.scss */
+  /* line 104, ../components/sass/style.scss */
   .odd .icon {
     left: -100px;
   }
 }
 @media (min-width: 768px) {
-  /* line 116, ../components/sass/style.scss */
-  .odd .inview.icon:after {
+  /* line 112, ../components/sass/style.scss */
+  .odd .inview-icon:after {
     width: 39px;
   }
 }
 
-/* line 125, ../components/sass/style.scss */
+/* line 121, ../components/sass/style.scss */
 .diagram {
   height: 510px;
   margin-top: 3em;
   text-align: center;
   background: #d4c8e3;
 }
-/* line 131, ../components/sass/style.scss */
+/* line 127, ../components/sass/style.scss */
 .diagram img {
   max-width: 100%;
   height: 20%;
@@ -139,45 +131,45 @@
   transition: all 0.6s ease-out;
 }
 @media (min-width: 768px) {
-  /* line 140, ../components/sass/style.scss */
-  .diagram img.inview {
+  /* line 136, ../components/sass/style.scss */
+  .diagram .inview-diagram {
     opacity: 1;
   }
 }
 
-/* line 151, ../components/sass/style.scss */
+/* line 147, ../components/sass/style.scss */
 .comexImage {
   width: 80%;
-  max-width: 500px;
+  max-width: 250px;
   opacity: 0;
   transition: all 0.9s ease-out;
 }
 
-/* line 159, ../components/sass/style.scss */
-.inview.comexImage {
+/* line 155, ../components/sass/style.scss */
+.inview-comex {
   opacity: 1;
 }
 
-/* line 164, ../components/sass/style.scss */
+/* line 160, ../components/sass/style.scss */
 .feature {
   display: inline-block;
   vertical-align: top;
   width: 120px;
-  padding-right: 10px;
   padding-top: 10px;
+  padding-right: 10px;
   font-size: 0.9em;
 }
-/* line 172, ../components/sass/style.scss */
+/* line 168, ../components/sass/style.scss */
 .feature img {
   width: 60px;
 }
-/* line 175, ../components/sass/style.scss */
+/* line 171, ../components/sass/style.scss */
 .feature hr {
-  border-top: 1px solid #682c91;
   margin: 10px 0 10px 0;
+  border-top: 1px solid #682c91;
 }
 @media (min-width: 335px) {
-  /* line 164, ../components/sass/style.scss */
+  /* line 160, ../components/sass/style.scss */
   .feature {
     width: 140px;
     padding-right: 30px;

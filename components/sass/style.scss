@@ -1,15 +1,4 @@
 
-// Borders for outlining divs 
-.outline{
-    border:2px solid black;
-}
-.outline-red{
-    border:2px solid red;
-}
-.outline-blue{
-    border:2px solid blue;
-}
-
 
 $purple        :  #682c91;
 $lightPurple   :  #d4c8e3;
@@ -31,9 +20,9 @@ $tabletWidth   :  768px;
 
 // Used for lists
 @mixin table{
-    border: 1px solid white;
-    padding: 8px;
     margin: 0;
+    padding: 8px;
+    border: 1px solid white;
 }
 .odd{
     background-color: $lightPurple;
@@ -46,9 +35,10 @@ $tabletWidth   :  768px;
 
 // The images to the left of the lists
 .icon{
-    display: inline;
-    transition: all 0.6s ease-out;
+    display: inline-block;
+    vertical-align: top;
 
+    transition: all 0.6s ease-out;
     // When page loads, icon starts 100px more 
     // left that it will finish when animated
     transform: translateX(-100px);
@@ -84,11 +74,17 @@ $tabletWidth   :  768px;
     }
 
 }
-.icon.inview{ // cause icons to transition in from right
+.inview-icon{ // cause icons to transition in from right
     transform: translateX(0px);
     opacity: 1;
 }
 // Even icons are further away from list
+.odd, .even{
+    span{
+        display: inline-block;
+        width: 80%;
+    }
+}
 .even {
     .icon{
         left: 0;
@@ -98,7 +94,7 @@ $tabletWidth   :  768px;
     }
     // When jQuery says item is in view, que transition
     // to extend line out of icon
-    .inview.icon:after{
+    .inview-icon:after{
         @media (min-width: $tabletWidth){
             width: 140px;
         }
@@ -113,7 +109,7 @@ $tabletWidth   :  768px;
     }
     // When jQuery says item is in view, que transition
     // to extend line out of icon
-    .inview.icon:after{
+    .inview-icon:after{
         @media (min-width: $tabletWidth){
             width: 39px;
         }
@@ -131,13 +127,13 @@ $tabletWidth   :  768px;
     img{
         max-width: 100%;
         height: 20%;
-        padding-top:    8px;
+        padding-top: 8px;
         padding-bottom: 8px;
 
         opacity: 0;
         transition: all 0.6s ease-out;
     }
-    img.inview {
+    .inview-diagram {
         // .diagram is hidden on mobile
         // Only animate when element is displayed
         @media (min-width: $tabletWidth){
@@ -150,13 +146,13 @@ $tabletWidth   :  768px;
 //Grows larger and opacity changes when in view
 .comexImage{
     width: 80%;
-    max-width: 500px;
+    max-width: 250px;
 
     opacity: 0;
     transition: all 0.9s ease-out;
 }
 
-.inview.comexImage{
+.inview-comex{
     opacity: 1;
 }
 
@@ -165,20 +161,20 @@ $tabletWidth   :  768px;
     display:inline-block;
     vertical-align: top;
     width: 120px;
-    padding-right: 10px;
     padding-top: 10px;
+    padding-right: 10px;
     font-size:0.9em;    
     
     img{
         width: 60px;
     }
     hr{
-        border-top:1px solid $purple;
-        margin:10px 0 10px 0;
+        margin: 10px 0 10px 0;
+        border-top: 1px solid $purple;
     }
     // Add spacing on larger screen
     @media (min-width:335px) {
-        width:140px;
+        width: 140px;
         padding-right: 30px;
     }
 }
