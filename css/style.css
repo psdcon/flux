@@ -42,7 +42,7 @@ body {
 
 /* line 45, style.scss */
 .flux-banner {
-  background: url("../images/main.jpg") no-repeat;
+  background: black url("../images/main.jpg") no-repeat;
   background-size: 100% auto;
   height: 300px;
   margin-top: 55px;
