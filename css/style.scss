@@ -1,0 +1,343 @@
+body{
+    font-size: 20px;
+    // color: #989898;
+}
+
+//Colour Variables
+$bg-purple      : #d2c6e1;
+$purple         : #682c91;
+$lightPurple    : #d4c8e3;
+$lighterPurple  : #f1eef7;
+$pink           : #F1EEF6;
+$black          : #1A1A1A;
+$gray           : #4D4D4D;
+$tabletWidth    : 768px;
+
+// Navbar
+.navbar{
+    padding-top: 5px;
+}
+.navbar-toggle{
+    border: none;
+}
+.navbar-toggle .icon-bar {
+    width: 60px;
+    height: 2px;
+    margin-bottom: 11px;
+}
+// Navbar Logo
+.navbar-brand{
+    padding-top:10px;
+    color: $gray;
+
+    img{
+        height: 35px;
+        vertical-align:bottom;
+    }
+    strong{
+        font-size: 38px;
+        margin-left:1em;
+    }
+}
+
+// Content
+.flux-banner{
+    background: url('../images/main.jpg') no-repeat ;
+    background-size: 100% auto;
+    height: 300px;
+    margin-top: 55px;
+}
+.heading{
+    font-size: 29pt;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+.subheading{
+    margin-bottom: 35px;
+    font-size: 20pt;
+}
+
+// About
+.nav-jump{
+    position: relative;
+    top: -50px;
+}
+
+.feature-1{
+    font-size: 17pt;
+    hr{
+        border: 1px solid gray
+    }
+    img{
+        display: inline-block;
+        max-height: 64px;
+        margin-right: 16px;
+        vertical-align: top;
+    }
+    p{
+        width: calc(100% - 90px);
+        display: inline-block;
+    }
+}
+.feature-2{
+    height: 150px;
+    border: 3px solid white;
+    color: black;
+    font-size: 11pt;
+    text-align: center;
+
+    img{
+        height: 50px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+}
+.feature-3{
+    // display: inline-block;
+    width: 290px;
+    padding-left: 30px;
+    // margin-right: 20px;
+    // min-height: 300px;
+    vertical-align: top;
+    text-align: left;
+    img{
+        height: 64px;
+    }
+    hr{
+        border: 1px solid $gray;
+    }
+}
+.touchslider-prev, .touchslider-next{
+    display: inline-block;
+    position: relative;
+    top: -130px;
+}
+.touchslider-prev{
+    padding-right: 1em;
+}
+.touchslider-next{    
+    padding-left: 1em;
+}
+.touchslider-viewport{
+    display: inline-block;
+    width:290px;
+    height:300px;
+    overflow:hidden;
+    // border:2px solid black;
+}
+.touchslider-nav-item{
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 3px solid $gray;    
+}
+.touchslider-nav-item-current{
+    background-color: $gray;
+}
+.feature-4{
+    padding: 20px;
+    text-align: center;
+    img{
+        padding-bottom: 20px;
+        width: 100%;
+        max-width: 128px;
+    }
+}
+.info-cont{
+    font-size: 18pt;
+    text-align: center;
+    padding: 20px;
+
+    .info-label{
+        padding: 10px;
+        max-width: 555px;
+        margin: 0 auto;
+    }
+}
+.bg-pink{
+    background-color: $pink;
+}
+.bg-purple{
+    background-color: $bg-purple;
+}
+.bg-black{
+    background-color: $black;
+}
+
+
+
+
+// Old styles
+
+// Used for titles
+.uppercase{
+    text-transform: uppercase;
+}
+.purple{
+    color: $purple;
+}
+.black{
+    color: black;
+}
+
+// Used for lists
+@mixin table{
+    margin: 0;
+    padding: 8px;
+    border: 1px solid white;
+}
+.odd{
+    background-color: $lightPurple;
+    @include table;
+}
+.even{
+    background-color: $lighterPurple;
+    @include table
+}
+
+// The images to the left of the lists
+.icon{
+    display: inline-block;
+    vertical-align: top;
+
+    transition: all 0.6s ease-out;
+    // When page loads, icon starts 100px more 
+    // left that it will finish when animated
+    transform: translateX(-100px);
+    opacity: 0;
+    
+    img{
+        height: 2em;
+        padding-right: 1em;
+    }        
+
+    @media (min-width:$tabletWidth){
+        position: absolute;
+        
+        img{
+            position: absolute;
+            top: -22px;
+            height: 64px;
+            padding-right:0;
+        }
+
+        &:after{
+            // Add line to right of icon. 
+            // Length (width) depends on even or odd
+            position: absolute;
+            top: 10px;
+            left: 70px;
+            width: 0;
+            height: 1px;
+            background: #bebbba; //gray
+            content: "";
+            transition: width 0.6s ease-out;
+        }
+    }
+
+}
+.inview-icon{ // cause icons to transition in from right
+    transform: translateX(0px);
+    opacity: 1;
+}
+// Even icons are further away from list
+.odd, .even{
+    span{
+        display: inline-block;
+        width: 80%;
+    }
+}
+.even {
+    .icon{
+        left: 0;
+        @media (min-width: $tabletWidth){
+            left: -200px;
+        }
+    }
+    // When jQuery says item is in view, que transition
+    // to extend line out of icon
+    .inview-icon:after{
+        @media (min-width: $tabletWidth){
+            width: 140px;
+        }
+    }
+}
+.odd {
+    .icon{
+        left: 0;
+        @media (min-width: $tabletWidth){
+            left: -100px;
+        }
+    }
+    // When jQuery says item is in view, que transition
+    // to extend line out of icon
+    .inview-icon:after{
+        @media (min-width: $tabletWidth){
+            width: 39px;
+        }
+    }
+}
+
+// Big purple box
+// Each of four images fades in
+.diagram{
+    height:510px;
+    margin-top:3em;
+    text-align: center;
+    background:#d4c8e3;
+
+    img{
+        max-width: 100%;
+        height: 20%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        opacity: 0;
+        transition: all 0.6s ease-out;
+    }
+    .inview-diagram {
+        // .diagram is hidden on mobile
+        // Only animate when element is displayed
+        @media (min-width: $tabletWidth){
+            opacity: 1;
+        }
+    }
+}
+
+// Image for comex case study. 
+//Grows larger and opacity changes when in view
+.comexImage{
+    width: 80%;
+    max-width: 250px;
+
+    opacity: 0;
+    transition: opacity 0.9s ease-out;
+}
+.inview-comex{
+    opacity: 1;
+}
+
+// At bottom of page
+.feature{
+    display:inline-block;
+    vertical-align: top;
+    width: 120px;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size:0.9em;    
+    
+    img{
+        width: 60px;
+    }
+    hr{
+        margin: 10px 0 10px 0;
+        border-top: 1px solid $purple;
+    }
+    // Add spacing on larger screen
+    @media (min-width:335px) {
+        width: 140px;
+        padding-right: 30px;
+    }
+}
