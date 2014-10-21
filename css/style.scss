@@ -36,6 +36,13 @@ $tabletWidth    : 768px;
         margin-left: 1em;
     }
 }
+.nav>li>a{
+    // nav bar collapse
+    @media (max-width: 995px){
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
 
 // Content
 .flux-banner{
@@ -43,6 +50,12 @@ $tabletWidth    : 768px;
     background-size: 100% auto;
     height: 300px;
     margin-top: 55px;
+    strong{
+        display: block;
+        margin-top: 45px;
+        font-size: 28px;
+        color: white;
+    }
     @media (min-width: $tabletWidth){
         height: 600px;
     }
@@ -54,8 +67,8 @@ $tabletWidth    : 768px;
     text-transform: uppercase;
 }
 .subheading{
-    margin-bottom: 32px;
     font-size: 26px;
+    line-height: 30px;
 }
 
 // About
@@ -90,10 +103,7 @@ $tabletWidth    : 768px;
     }
 }
 .feature-3{
-    width: 290px;
-    padding-left: 30px;
-    vertical-align: top;
-    text-align: left;
+    
     p{
         margin-top: 1em;
     }
@@ -107,10 +117,7 @@ $tabletWidth    : 768px;
 }
 .not-touchslider{
     .feature-3{
-        display: inline-block;
-        margin-right: 20px;        
-        min-height: 300px;
-        width: 22%;
+        // min-height: 300px;
     }
     @media (min-width: $tabletWidth){
         display: block;
@@ -121,6 +128,12 @@ $tabletWidth    : 768px;
 }
 .touchslider{
     text-align: center;
+    .feature-3{
+        width: 290px;
+        padding-left: 30px;
+        vertical-align: top;
+        text-align: left;
+    }
     @media (min-width: $tabletWidth){
         display: none;
     }
