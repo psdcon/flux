@@ -59,11 +59,6 @@ $tabletWidth    : 768px;
 }
 
 // About
-.nav-jump{
-    position: relative;
-    top: -50px;
-}
-
 .feature-1{
     font-size: 23px;
     padding-bottom: 15px;
@@ -115,6 +110,7 @@ $tabletWidth    : 768px;
         display: inline-block;
         margin-right: 20px;        
         min-height: 300px;
+        width: 22%;
     }
     @media (min-width: $tabletWidth){
         display: block;
