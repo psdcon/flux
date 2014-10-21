@@ -4,9 +4,10 @@ body{
 }
 
 //Colour Variables
-$bg-purple      : #d2c6e1;
-$pink           : #F1EEF6;
+$bg-purple      : #cfb6d9;
+$pink           : #e4dcec;
 $black          : #1A1A1A;
+$puke           : #f1eef6;
 $gray           : #4D4D4D;
 $tabletWidth    : 768px;
 
@@ -158,14 +159,14 @@ $tabletWidth    : 768px;
 }
 .touchslider-nav-item{
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    border: 3px solid $gray;
+    border: 2px solid #808080;
     margin-bottom: 35px;
 }
 .touchslider-nav-item-current{
-    background-color: $gray;
+    background-color: white;
 }
 .feature-4{
     padding: 20px;

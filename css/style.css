@@ -3,51 +3,51 @@ body {
   font-size: 19px;
 }
 
-/* line 14, style.scss */
+/* line 15, style.scss */
 .navbar {
   padding-top: 5px;
   padding-bottom: 7px;
 }
 
-/* line 18, style.scss */
+/* line 19, style.scss */
 .navbar-toggle {
   border: none;
 }
 
-/* line 21, style.scss */
+/* line 22, style.scss */
 .navbar-toggle .icon-bar {
   width: 60px;
   height: 2px;
   margin-bottom: 11px;
 }
 
-/* line 27, style.scss */
+/* line 28, style.scss */
 .navbar-brand {
   padding-top: 10px;
   color: #4D4D4D;
 }
-/* line 31, style.scss */
+/* line 32, style.scss */
 .navbar-brand img {
   height: 33px;
   vertical-align: bottom;
 }
 
 @media (max-width: 995px) {
-  /* line 36, style.scss */
+  /* line 37, style.scss */
   .nav > li > a {
     padding-right: 10px;
     padding-left: 10px;
   }
 }
 
-/* line 45, style.scss */
+/* line 46, style.scss */
 .flux-banner {
   background: black url("../images/main.jpg") no-repeat;
   background-size: 100% auto;
   height: 300px;
   margin-top: 55px;
 }
-/* line 50, style.scss */
+/* line 51, style.scss */
 .flux-banner strong {
   display: block;
   margin-top: 45px;
@@ -55,13 +55,13 @@ body {
   color: white;
 }
 @media (min-width: 768px) {
-  /* line 45, style.scss */
+  /* line 46, style.scss */
   .flux-banner {
     height: 600px;
   }
 }
 
-/* line 60, style.scss */
+/* line 61, style.scss */
 .heading {
   font-size: 32px;
   margin-top: 40px;
@@ -70,35 +70,35 @@ body {
   font-weight: 700;
 }
 
-/* line 67, style.scss */
+/* line 68, style.scss */
 .subheading {
   font-size: 26px;
   line-height: 30px;
 }
 
-/* line 73, style.scss */
+/* line 74, style.scss */
 .feature-1 {
   font-size: 23px;
   padding-bottom: 15px;
 }
-/* line 76, style.scss */
+/* line 77, style.scss */
 .feature-1 hr {
   border: 1px solid gray;
 }
-/* line 79, style.scss */
+/* line 80, style.scss */
 .feature-1 img {
   display: inline-block;
   max-height: 64px;
   margin-right: 16px;
   vertical-align: top;
 }
-/* line 85, style.scss */
+/* line 86, style.scss */
 .feature-1 p {
   width: calc(100% - 90px);
   display: inline-block;
 }
 
-/* line 90, style.scss */
+/* line 91, style.scss */
 .feature-2 {
   height: 150px;
   border: 3px solid white;
@@ -106,45 +106,45 @@ body {
   font-size: 11pt;
   text-align: center;
 }
-/* line 97, style.scss */
+/* line 98, style.scss */
 .feature-2 img {
   height: 50px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
 
-/* line 104, style.scss */
+/* line 105, style.scss */
 .feature-3 p {
   margin-top: 1em;
 }
-/* line 107, style.scss */
+/* line 108, style.scss */
 .feature-3 img {
   height: 64px;
 }
-/* line 110, style.scss */
+/* line 111, style.scss */
 .feature-3 hr {
   border: 1px solid #4D4D4D;
   margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
-  /* line 115, style.scss */
+  /* line 116, style.scss */
   .not-touchslider {
     display: block;
   }
 }
 @media (max-width: 768px) {
-  /* line 115, style.scss */
+  /* line 116, style.scss */
   .not-touchslider {
     display: none;
   }
 }
 
-/* line 123, style.scss */
+/* line 124, style.scss */
 .touchslider {
   text-align: center;
 }
-/* line 125, style.scss */
+/* line 126, style.scss */
 .touchslider .feature-3 {
   width: 290px;
   padding-left: 30px;
@@ -152,40 +152,40 @@ body {
   text-align: left;
 }
 @media (min-width: 768px) {
-  /* line 123, style.scss */
+  /* line 124, style.scss */
   .touchslider {
     display: none;
   }
 }
 @media (max-width: 768px) {
-  /* line 123, style.scss */
+  /* line 124, style.scss */
   .touchslider {
     display: block;
   }
 }
 
-/* line 138, style.scss */
+/* line 139, style.scss */
 .touchslider-prev, .touchslider-next {
   display: inline-block;
   position: relative;
   top: -260px;
 }
-/* line 142, style.scss */
+/* line 143, style.scss */
 .touchslider-prev img, .touchslider-next img {
   height: 50px;
 }
 
-/* line 146, style.scss */
+/* line 147, style.scss */
 .touchslider-prev {
   padding-right: 35px;
 }
 
-/* line 149, style.scss */
+/* line 150, style.scss */
 .touchslider-next {
   padding-left: 35px;
 }
 
-/* line 152, style.scss */
+/* line 153, style.scss */
 .touchslider-viewport {
   display: inline-block;
   width: 290px;
@@ -193,57 +193,57 @@ body {
   overflow: hidden;
 }
 
-/* line 159, style.scss */
+/* line 160, style.scss */
 .touchslider-nav-item {
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  border: 3px solid #4D4D4D;
+  border: 2px solid #808080;
   margin-bottom: 35px;
 }
 
-/* line 167, style.scss */
+/* line 168, style.scss */
 .touchslider-nav-item-current {
-  background-color: #4D4D4D;
+  background-color: white;
 }
 
-/* line 170, style.scss */
+/* line 171, style.scss */
 .feature-4 {
   padding: 20px;
   text-align: center;
 }
-/* line 173, style.scss */
+/* line 174, style.scss */
 .feature-4 img {
   padding-bottom: 20px;
   width: 100%;
   max-width: 85px;
 }
 
-/* line 179, style.scss */
+/* line 180, style.scss */
 .info-cont {
   font-size: 18pt;
   text-align: center;
   padding: 20px;
 }
-/* line 184, style.scss */
+/* line 185, style.scss */
 .info-cont .info-label {
   padding: 10px;
   max-width: 555px;
   margin: 0 auto;
 }
 
-/* line 192, style.scss */
+/* line 193, style.scss */
 .bg-pink {
-  background-color: #F1EEF6;
+  background-color: #e4dcec;
 }
 
-/* line 195, style.scss */
+/* line 196, style.scss */
 .bg-purple {
-  background-color: #d2c6e1;
+  background-color: #cfb6d9;
 }
 
-/* line 198, style.scss */
+/* line 199, style.scss */
 .bg-black {
   background-color: #1A1A1A;
 }
