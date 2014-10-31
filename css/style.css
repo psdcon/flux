@@ -14,20 +14,21 @@ body {
   overflow-x: hidden;
 }
 
-/* line 29, style.scss */
+/* line 28, style.scss */
 .limit, .navbar .container {
   max-width: 960px;
   margin: 0 auto;
 }
 
-/* line 34, style.scss */
+/* line 33, style.scss */
 .navbar {
+  color: #989898;
   padding-bottom: 8px;
   padding-top: 8px;
   margin-bottom: 0px;
 }
 @media (min-width: 768px) {
-  /* line 34, style.scss */
+  /* line 33, style.scss */
   .navbar {
     padding-top: 20px;
     padding-bottom: 11px;
@@ -44,14 +45,13 @@ body {
 .navbar-brand {
   padding-top: 0;
   padding-bottom: 0;
-  color: #4D4D4D;
   height: 31px;
 }
-/* line 55, style.scss */
+/* line 53, style.scss */
 .navbar-brand img, .navbar-brand .icon {
   float: left;
 }
-/* line 58, style.scss */
+/* line 56, style.scss */
 .navbar-brand strong {
   float: left;
   display: none;
@@ -59,13 +59,13 @@ body {
   font-size: 12pt;
 }
 @media (min-width: 845px) {
-  /* line 58, style.scss */
+  /* line 56, style.scss */
   .navbar-brand strong {
     display: inline;
   }
 }
 
-/* line 69, style.scss */
+/* line 67, style.scss */
 .navbar-toggle {
   height: 31px;
   padding: 2px;
@@ -74,20 +74,20 @@ body {
   border: none;
 }
 
-/* line 76, style.scss */
+/* line 74, style.scss */
 .navbar-toggle .icon-bar {
   width: 50px;
   height: 2px;
   margin-bottom: 10px;
 }
 
-/* line 81, style.scss */
+/* line 79, style.scss */
 .navbar-collapse {
   margin-top: 8px;
 }
 
 @media (min-width: 768px) {
-  /* line 84, style.scss */
+  /* line 82, style.scss */
   .nav > li > a {
     padding-top: 0;
     padding-bottom: 0;
@@ -95,30 +95,30 @@ body {
   }
 }
 
-/* line 93, style.scss */
+/* line 91, style.scss */
 .top-contact {
-  height: 28px;
+  height: 32px;
   margin-top: 50px;
-  padding-top: 2px;
+  padding-top: 6px;
   font-size: 13pt;
   color: white;
-  background-color: #989898;
+  background-color: #4D4D4D;
 }
 @media (min-width: 768px) {
-  /* line 93, style.scss */
+  /* line 91, style.scss */
   .top-contact {
     margin-top: 61px;
   }
 }
 
-/* line 106, style.scss */
+/* line 104, style.scss */
 .flux-banner {
   height: 220px;
   background: black url("../images/main.jpg") no-repeat;
   background-size: 120% auto;
   background-position: center top;
 }
-/* line 111, style.scss */
+/* line 109, style.scss */
 .flux-banner strong {
   display: block;
   margin-top: 30px;
@@ -126,20 +126,21 @@ body {
   color: white;
 }
 @media (min-width: 768px) {
-  /* line 106, style.scss */
+  /* line 104, style.scss */
   .flux-banner {
     height: 600px;
     background-size: 100% auto;
   }
-  /* line 120, style.scss */
+  /* line 118, style.scss */
   .flux-banner strong {
     margin-top: 95px;
     font-size: 35pt;
   }
 }
 
-/* line 126, style.scss */
+/* line 124, style.scss */
 .heading {
+  letter-spacing: 5px;
   margin-top: 32px;
   margin-bottom: 32px;
   font-size: 29pt;
@@ -147,72 +148,72 @@ body {
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
-  /* line 126, style.scss */
+  /* line 124, style.scss */
   .heading {
     margin-top: 36px;
     font-size: 37pt;
   }
 }
 
-/* line 138, style.scss */
+/* line 137, style.scss */
 .subheading {
   margin-bottom: 32px;
   font-size: 20pt;
 }
 @media (min-width: 768px) {
-  /* line 138, style.scss */
+  /* line 137, style.scss */
   .subheading {
     margin-bottom: 52px;
     font-size: 23pt;
   }
 }
 
-/* line 146, style.scss */
+/* line 145, style.scss */
 .subberheading {
   font-size: 20pt;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  /* line 146, style.scss */
+  /* line 145, style.scss */
   .subberheading {
     padding-top: 40px;
   }
 }
 
-/* line 155, style.scss */
+/* line 154, style.scss */
 #about {
   padding-bottom: 60px;
 }
 @media (min-width: 768px) {
-  /* line 155, style.scss */
+  /* line 154, style.scss */
   #about {
     padding-bottom: 40px;
   }
 }
 
-/* line 162, style.scss */
+/* line 161, style.scss */
 #core-components-text {
   display: block;
   margin: 10px 0 10px 0;
   font-weight: 700;
 }
 @media (min-width: 768px) {
-  /* line 162, style.scss */
+  /* line 161, style.scss */
   #core-components-text {
     font-size: 23pt;
   }
 }
 
-/* line 171, style.scss */
+/* line 170, style.scss */
 .feature-1 {
   font-size: 17pt;
   padding-bottom: 15px;
 }
-/* line 174, style.scss */
+/* line 173, style.scss */
 .feature-1 hr {
   border: 1px solid #4D4D4D;
 }
-/* line 177, style.scss */
+/* line 176, style.scss */
 .feature-1 img, .feature-1 .icon {
   display: inline-block;
   max-height: 60px;
@@ -220,13 +221,13 @@ body {
   margin-right: 24px;
   vertical-align: top;
 }
-/* line 184, style.scss */
+/* line 183, style.scss */
 .feature-1 p {
   display: inline-block;
   width: calc(100% - 90px);
 }
 
-/* line 189, style.scss */
+/* line 188, style.scss */
 .feature-2 {
   height: 120px;
   border: 3px solid white;
@@ -234,7 +235,7 @@ body {
   font-size: 11pt;
   text-align: center;
 }
-/* line 196, style.scss */
+/* line 195, style.scss */
 .feature-2 img, .feature-2 .icon {
   width: 35px;
   height: 35px;
@@ -242,84 +243,84 @@ body {
   margin-bottom: 8px;
 }
 @media (max-width: 464px) {
-  /* line 189, style.scss */
+  /* line 188, style.scss */
   .feature-2 {
     height: 135px;
   }
 }
 @media (max-width: 356px) {
-  /* line 206, style.scss */
+  /* line 205, style.scss */
   .feature-2:nth-last-child(2), .feature-2:last-child {
     height: 150px;
   }
 }
 @media (min-width: 768px) {
-  /* line 189, style.scss */
+  /* line 188, style.scss */
   .feature-2 {
     height: 155px;
     font-size: 16pt;
   }
-  /* line 216, style.scss */
+  /* line 215, style.scss */
   .feature-2 img, .feature-2 .icon {
     width: 55px;
     height: 55px;
   }
-  /* line 221, style.scss */
+  /* line 220, style.scss */
   .feature-2:nth-last-child(3), .feature-2:nth-last-child(2), .feature-2:last-child {
     height: 185px;
   }
 }
 @media (min-width: 904px) {
-  /* line 227, style.scss */
+  /* line 226, style.scss */
   .feature-2:nth-last-child(3), .feature-2:nth-last-child(2), .feature-2:last-child {
     height: 155px;
   }
 }
 
-/* line 234, style.scss */
+/* line 233, style.scss */
 .feature-3 p {
   margin-top: 1em;
 }
-/* line 237, style.scss */
+/* line 236, style.scss */
 .feature-3 img, .feature-3 .icon {
   width: 64px;
   height: 64px;
 }
-/* line 241, style.scss */
+/* line 240, style.scss */
 .feature-3 hr {
   border: 1px solid #4D4D4D;
   margin-bottom: 10px;
 }
 
-/* line 246, style.scss */
+/* line 245, style.scss */
 .not-touchslider {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 246, style.scss */
+  /* line 245, style.scss */
   .not-touchslider {
     display: block;
   }
 }
-/* line 252, style.scss */
+/* line 251, style.scss */
 .not-touchslider #other-features-text {
   margin-top: 80px;
   margin-bottom: 1.5em;
 }
 
-/* line 257, style.scss */
+/* line 256, style.scss */
 .touchslider {
   position: relative;
   text-align: center;
 }
 @media (min-width: 768px) {
-  /* line 257, style.scss */
+  /* line 256, style.scss */
   .touchslider {
     display: none;
   }
 }
 
-/* line 266, style.scss */
+/* line 265, style.scss */
 .touchslider-viewport {
   overflow: hidden;
   display: inline-block;
@@ -327,20 +328,20 @@ body {
   height: 350px;
 }
 @media (min-width: 335px) {
-  /* line 266, style.scss */
+  /* line 265, style.scss */
   .touchslider-viewport {
     width: 280px;
   }
 }
 @media (min-width: 535px) {
-  /* line 266, style.scss */
+  /* line 265, style.scss */
   .touchslider-viewport {
     width: 350px;
     height: 320px;
   }
 }
 
-/* line 282, style.scss */
+/* line 281, style.scss */
 .touchslider .feature-3 {
   vertical-align: top;
   text-align: left;
@@ -349,30 +350,31 @@ body {
   width: 260px;
 }
 @media (min-width: 335px) {
-  /* line 282, style.scss */
+  /* line 281, style.scss */
   .touchslider .feature-3 {
     width: 280px;
   }
 }
 @media (min-width: 535px) {
-  /* line 282, style.scss */
+  /* line 281, style.scss */
   .touchslider .feature-3 {
     width: 350px;
   }
 }
 
-/* line 298, style.scss */
+/* line 297, style.scss */
 .touchslider-prev, .touchslider-next {
   display: inline-block;
   position: absolute;
   top: 380px;
 }
-/* line 300, style.scss */
+/* line 299, style.scss */
 .touchslider-prev img, .touchslider-next img {
+  width: 25px;
   height: 50px;
 }
 @media (min-width: 428px) {
-  /* line 298, style.scss */
+  /* line 297, style.scss */
   .touchslider-prev, .touchslider-next {
     top: 70px;
   }

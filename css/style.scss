@@ -21,7 +21,6 @@ $tabletWidth    : 768px;
 body{
     font-family: infotext;
     font-size: 16pt;
-    // color: #989898;
     overflow-x: hidden;
 }
 
@@ -32,6 +31,7 @@ body{
 }
 // Navbar styles
 .navbar{
+    color: #989898;
     padding-bottom: 8px;
     padding-top: 8px;
     margin-bottom: 0px;
@@ -49,8 +49,6 @@ body{
 .navbar-brand{
     padding-top: 0;
     padding-bottom: 0;
-    // padding-left: 15px;
-    color: $gray;
     height: 31px;
     img, .icon{
         float: left;
@@ -91,12 +89,12 @@ body{
 
 //Contact info under nav
 .top-contact{
-    height: 28px;
+    height: 32px;
     margin-top: 50px;
-    padding-top: 2px;
+    padding-top: 6px;
     font-size: 13pt;
     color: white;
-    background-color: #989898;
+    background-color: $gray;
     @media (min-width: $tabletWidth){
         margin-top: 61px;
     }
@@ -124,6 +122,7 @@ body{
     }
 }
 .heading{
+    letter-spacing: 5px;
     margin-top: 32px;
     margin-bottom: 32px;
     font-size: 29pt;
@@ -298,6 +297,7 @@ body{
 .touchslider-prev, .touchslider-next{
     // border: 2px solid red;
     img{
+        width: 25px;
         height: 50px;
     }
 
