@@ -208,7 +208,7 @@ body {
 }
 /* line 176, style.scss */
 .feature-1 hr {
-  border: 1px solid #4D4D4D;
+  border-top: 1px solid #4D4D4D;
   margin-top: 17px;
   margin-bottom: 16px;
 }
@@ -290,7 +290,7 @@ body {
 
 /* line 246, style.scss */
 .feature-3 hr {
-  border: 1px solid #4D4D4D;
+  border-top: 1px solid #4D4D4D;
   margin-top: 15px;
   margin-bottom: 6px;
 }
