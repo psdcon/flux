@@ -309,7 +309,6 @@ body {
 
 /* line 257, style.scss */
 .touchslider {
-  border: 2px solid green;
   position: relative;
   text-align: center;
 }
@@ -322,7 +321,6 @@ body {
 
 /* line 266, style.scss */
 .touchslider-viewport {
-  border: 2px solid black;
   overflow: hidden;
   display: inline-block;
   width: 260px;
@@ -344,7 +342,6 @@ body {
 
 /* line 282, style.scss */
 .touchslider .feature-3 {
-  border: 2px solid blue;
   vertical-align: top;
   text-align: left;
   padding-left: 20px;
@@ -366,7 +363,6 @@ body {
 
 /* line 298, style.scss */
 .touchslider-prev, .touchslider-next {
-  border: 2px solid red;
   display: inline-block;
   position: absolute;
   top: 380px;
