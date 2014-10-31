@@ -1,8 +1,0 @@
-Flux site typefaces:
-Info text regular
-Info text semi-bold
-
-Header should remain fixed.
-Links jump to related sections.
-
-

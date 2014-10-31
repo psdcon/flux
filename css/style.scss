@@ -1,9 +1,16 @@
-body{
-    font-size: 19px;
-    // color: #989898;
+//Fonts
+@font-face {
+    font-family: infotext;
+    src: url(fonts/infotext-normal.ttf);
 }
 
-//Colour Variables
+@font-face {
+    font-family: infotext-semibold;
+    src: url(fonts/infotext-semibold.ttf);
+    font-weight: bold;
+}
+
+// Variables
 $bg-purple      : #cfb6d9;
 $pink           : #e4dcec;
 $black          : #1A1A1A;
@@ -11,95 +18,214 @@ $puke           : #f1eef6;
 $gray           : #4D4D4D;
 $tabletWidth    : 768px;
 
-// Navbar
+body{
+    font-family: infotext;
+    font-size: 16pt;
+    // color: #989898;
+    overflow-x: hidden;
+}
+
+// Site centers on page above 960px
+.limit, .navbar .container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+// Navbar styles
 .navbar{
-    padding-top: 5px;
-    padding-bottom: 7px;
-}
-.navbar-toggle{
-    border: none;
-}
-.navbar-toggle .icon-bar {
-    width: 60px;
-    height: 2px;
-    margin-bottom: 11px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    margin-bottom: 0px;
+    @media (min-width: $tabletWidth){
+        padding-top:20px;
+        padding-bottom: 11px;
+    }
+    .container{
+        @media (min-width: $tabletWidth){
+            width: 100%;
+        }
+    }
 }
 // Navbar Logo
 .navbar-brand{
-    padding-top:10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    // padding-left: 15px;
     color: $gray;
-
-    img{
-        height: 33px;
-        vertical-align: bottom;
+    height: 31px;
+    *{
+        float: left;
+    }
+    strong{
+        display: none;
+        margin: 7px 0 0 30px;
+        font-size: 12pt;
+        @media (min-width: 845px){
+            display: inline;
+        }
     }
 }
+// Hamburger menu
+.navbar-toggle{
+    height: 31px;
+    padding: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: none;
+}
+.navbar-toggle .icon-bar {
+    width: 50px;
+    height: 2px;
+    margin-bottom: 10px;
+}
+.navbar-collapse{
+    margin-top: 8px;
+}
 .nav>li>a{
-    // nav bar collapse
-    @media (max-width: 995px){
-        padding-right: 10px;
-        padding-left: 10px;
+    @media (min-width: $tabletWidth){
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 13pt
+    }
+}
+
+//Contact info under nav
+.top-contact{
+    height: 28px;
+    margin-top: 50px;
+    padding-top: 2px;
+    font-size: 13pt;
+    color: white;
+    background-color: #989898;
+    @media (min-width: $tabletWidth){
+        margin-top: 61px;
     }
 }
 
 // Content
 .flux-banner{
-    background: black url('../images/main.jpg') no-repeat ;
-    background-size: 100% auto;
-    height: 300px;
-    margin-top: 55px;
+    height: 220px;
+    background: black url('../images/main.jpg') no-repeat;
+    background-size: 120% auto;
+    background-position: center top;
     strong{
         display: block;
-        margin-top: 45px;
-        font-size: 28px;
+        margin-top: 30px;
+        font-size: 21pt;
         color: white;
     }
     @media (min-width: $tabletWidth){
         height: 600px;
+        background-size: 100% auto;
+        strong{
+            margin-top: 95px;
+            font-size: 35pt;
+        }
     }
 }
 .heading{
-    font-size: 32px;
-    margin-top: 40px;
+    margin-top: 32px;
     margin-bottom: 32px;
-    text-transform: uppercase;
+    font-size: 29pt;
     font-weight: 700;
+    text-transform: uppercase;
+    @media (min-width: $tabletWidth){
+        margin-top: 36px;
+        font-size: 37pt;
+    }
+
 }
 .subheading{
-    font-size: 26px;
-    line-height: 30px;
+    margin-bottom: 32px;
+    font-size: 20pt;
+    @media (min-width: $tabletWidth){
+        margin-bottom: 52px;
+        font-size: 23pt;
+    }
+}
+.subberheading{
+    font-size: 20pt;
+    font-weight: 700;
+    @media (min-width: $tabletWidth){
+        padding-top:40px;
+    }
 }
 
 // About
+#about{
+    padding-bottom:60px;
+    @media (min-width: $tabletWidth){
+        padding-bottom:40px;
+    }
+}
+//Solutions
+#core-components-text{
+    display:block;
+    margin:10px 0 10px 0;
+    font-weight: 700;
+
+    @media (min-width: $tabletWidth){
+        font-size: 23pt;
+    }
+}
 .feature-1{
-    font-size: 23px;
+    font-size: 17pt;
     padding-bottom: 15px;
     hr{
-        border: 1px solid gray
+        border: 1px solid $gray
     }
-    img{
+    img, .icon{
         display: inline-block;
-        max-height: 64px;
-        margin-right: 16px;
+        max-height: 60px;
+        max-width: 60px; //svg
+        margin-right: 24px;
         vertical-align: top;
     }
     p{
-        width: calc(100% - 90px);
         display: inline-block;
+        width: calc(100% - 90px);
     }
 }
 .feature-2{
-    height: 150px;
+    height: 120px;
     border: 3px solid white;
     color: black;
     font-size: 11pt;
     text-align: center;
 
     img{
-        height: 50px;
-        margin-top: 20px;
-        margin-bottom: 10px;
+        height: 35px;
+        margin-top: 16px;
+        margin-bottom: 8px;
     }
+    @media (max-width: 464px){
+        height: 135px;
+    }
+    // Expand bottom two features when text overflows
+    &:nth-last-child(2), &:last-child{
+        @media (max-width: 356px){
+            height: 150px;
+        }
+    }
+    
+    // Above breakpoint make font-size and height bigger
+    @media (min-width: $tabletWidth){
+        height: 155px;
+        font-size: 16pt;
+        img{
+            height: 55px;
+        }
+        // Make bottom row of tiles bigger for "Monte-Carlo" text
+        &:nth-last-child(3), &:nth-last-child(2), &:last-child{
+            height: 185px;
+        }
+    }
+    // Make bottom row the same size as top as "Monte-Carlo" text wraps back up
+    @media (min-width: 904px){
+        &:nth-last-child(3), &:nth-last-child(2), &:last-child{
+            height: 155px;
+        }
+    }
+
 }
 .feature-3{
     p{
@@ -114,48 +240,99 @@ $tabletWidth    : 768px;
     }
 }
 .not-touchslider{
+    display: none;
+    // Show above breakpoint show
     @media (min-width: $tabletWidth){
         display: block;
     }
-    @media (max-width: $tabletWidth){
-        display: none;
+    #other-features-text{
+        margin-top:80px;
+        margin-bottom:1.5em;
     }
 }
 .touchslider{
+    border: 2px solid green;
+    position: relative;
     text-align: center;
-    .feature-3{
-        width: 290px;
-        padding-left: 30px;
-        vertical-align: top;
-        text-align: left;
-    }
+    // Hide above breakpoint
     @media (min-width: $tabletWidth){
         display: none;
     }
-    @media (max-width: $tabletWidth){
-        display: block;
+}
+.touchslider-viewport{
+    border: 2px solid black;
+    overflow: hidden;
+    display: inline-block;
+
+    width:260px;
+    height:350px;
+
+    @media (min-width: 335px){
+        width:280px;
+    }
+    @media (min-width: 535px){
+        width:350px;
+        height:320px;
+    }
+}
+.touchslider .feature-3{
+    border: 2px solid blue;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    width:260px;
+
+    @media (min-width: 335px){
+        width:280px;
+    }
+    @media (min-width: 535px){
+        width: 350px;
     }
 }
 .touchslider-prev, .touchslider-next{
-    display: inline-block;
-    position: relative;
-    top: -260px;
+    border: 2px solid red;
     img{
         height: 50px;
     }
+
+    display: inline-block;
+    position: absolute;
+    top: 380px;
+    // Buttons wrap to be inline with dots
+    @media (min-width: 428px){
+        top: 70px;
+    }
 }
 .touchslider-prev{
-    padding-right: 35px;
+    padding-right: 0;
+    margin-left: -147px;        
+    @media (min-width: 340px){
+        margin-left: -153px;
+    }
+    @media (min-width: 428px){
+        margin-left: -192px;
+        padding-right: 15px;
+    }
+    @media (min-width: 535px){
+        margin-left: -247px;
+        padding-right: 35px;
+    }
 }
 .touchslider-next{    
-    padding-left: 35px;
-}
-.touchslider-viewport{
-    display: inline-block;
-    width:290px;
-    height:300px;
-    overflow:hidden;
-    // border:2px solid black;
+    padding-left: 0;
+    margin-left: -15px;        
+    @media (min-width: 340px){
+        margin-left: -15px;
+    }
+    @media (min-width: 428px){
+        margin-left: 0;
+        padding-left: 15px;
+    }
+    @media (min-width: 535px){
+        padding-left: 35px;
+    }
 }
 .touchslider-nav-item{
     display: inline-block;
@@ -163,29 +340,46 @@ $tabletWidth    : 768px;
     height: 16px;
     border-radius: 50%;
     border: 2px solid #808080;
-    margin-bottom: 35px;
 }
 .touchslider-nav-item-current{
-    background-color: white;
+    background-color: #808080;
+}
+
+#helping-your-text{
+    display:block;
+    @media (min-width: $tabletWidth){
+        padding-top: 80px;
+        font-size: 23pt;
+    }
+}
+.feature-4-pad{
+    margin: 0;
+    @media (min-width: $tabletWidth){
+        padding-right: 20px;
+        padding-left: 20px;
+    }
 }
 .feature-4{
     padding: 20px;
     text-align: center;
     img{
         padding-bottom: 20px;
-        width: 100%;
-        max-width: 85px;
+        width: 85px;
     }
 }
 .info-cont{
-    font-size: 18pt;
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-align: center;
-    padding: 20px;
 
     .info-label{
         padding: 10px;
         max-width: 555px;
         margin: 0 auto;
+        font-weight: 700;
+        @media (min-width: $tabletWidth){
+            padding: 20px;
+        }
     }
 }
 

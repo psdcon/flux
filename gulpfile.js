@@ -3,11 +3,18 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     compass = require('gulp-compass'),
     prefix = require('gulp-autoprefixer');
+    inject = require('gulp-inject');
+    svgmin = require('gulp-svgmin');
+    svgstore = require('gulp-svgstore');
 
+function fileContents (filePath, file) {
+  return file.contents.toString('utf8');
+}
 
 gulp.task('watch', function() {
   gulp.watch('css/*.scss', ['compass']);
-  gulp.watch('*.html', ['html']);
+  gulp.watch('src/*.html', ['html']);
+  gulp.watch('svg/*.svg', ['svg']);
 });
 
 gulp.task('connect', function() {
@@ -18,7 +25,11 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function() {
-  gulp.src('*.html')
+  var injects = gulp.src(['*.svg'], {read: true});
+  gulp
+    .src('src/*.html')
+    .pipe(inject(injects, { transform: fileContents })) 
+    .pipe(gulp.dest(''))
     .pipe(connect.reload());
 });
 
@@ -35,4 +46,16 @@ gulp.task('compass', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('default', ['html', 'compass', 'connect', 'watch']);
+gulp.task('svg', function () {
+  var svgs = gulp.src('svg/*.svg')
+    .pipe(svgmin())
+    .pipe(svgstore({ fileName: 'icons.svg', prefix: 'icon-', inlineSvg: true }))
+    .pipe(gulp.dest(''));
+
+  gulp.src('src/index.html')
+    .pipe(inject(svgs, { transform: fileContents }))
+    .pipe(gulp.dest(''))
+    .pipe(connect.reload());
+});
+
+gulp.task('default', ['html', 'compass', 'connect', 'watch', 'svg']);
