@@ -1,12 +1,12 @@
 //Fonts
 @font-face {
     font-family: infotext;
-    src: url(fonts/infotext-normal.ttf);
+    src: url(fonts/infotext-normal.woff);
 }
 
 @font-face {
     font-family: infotext-semibold;
-    src: url(fonts/infotext-semibold.ttf);
+    src: url(fonts/infotext-semibold.woff);
     font-weight: bold;
 }
 
@@ -52,10 +52,11 @@ body{
     // padding-left: 15px;
     color: $gray;
     height: 31px;
-    *{
+    img, .icon{
         float: left;
     }
     strong{
+        float: left;
         display: none;
         margin: 7px 0 0 30px;
         font-size: 12pt;
@@ -192,7 +193,8 @@ body{
     font-size: 11pt;
     text-align: center;
 
-    img{
+    img, .icon{
+        width: 35px;
         height: 35px;
         margin-top: 16px;
         margin-bottom: 8px;
@@ -211,7 +213,8 @@ body{
     @media (min-width: $tabletWidth){
         height: 155px;
         font-size: 16pt;
-        img{
+        img, .icon{
+            width: 55px;
             height: 55px;
         }
         // Make bottom row of tiles bigger for "Monte-Carlo" text
@@ -231,7 +234,8 @@ body{
     p{
         margin-top: 1em;
     }
-    img{
+    img, .icon{
+        width: 64px;
         height: 64px;
     }
     hr{
@@ -362,9 +366,10 @@ body{
 .feature-4{
     padding: 20px;
     text-align: center;
-    img{
+    img, .icon{
         padding-bottom: 20px;
         width: 85px;
+        height: 85px;
     }
 }
 .info-cont{
