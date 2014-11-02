@@ -248,15 +248,15 @@ p{margin:0;}
     }
 }
 .feature-2{
-    height: 83px;
+    height: 106px;
     padding: 2px; // inherit from col's
     border: 2px solid white;
-    font-size: 12px;
+    font-size: 16px;
     text-align: center;
 
     img, .icon{
-        width: 28px;
-        height: 28px;
+        height: 51px;
+        width: 51px; //svg
         margin-top: 13px;
         margin-bottom: 2px;
     }
