@@ -690,7 +690,7 @@ p {
 }
 
 /* line 540, style.scss */
-.feature-1 .icon, .feature-2 .icon, .not-touchslider .feature-3 .icon {
+.feature-1 .icon, .not-touchslider .feature-3 .icon {
   width: 50px;
   height: 50px;
   -webkit-transition: all 0.5s ease;
@@ -701,15 +701,34 @@ p {
   opacity: 0;
 }
 /* line 547, style.scss */
-.feature-1 .icon.inview, .feature-2 .icon.inview, .not-touchslider .feature-3 .icon.inview {
+.feature-1 .icon.inview, .not-touchslider .feature-3 .icon.inview {
   -webkit-transform: translateX(0px);
       -ms-transform: translateX(0px);
           transform: translateX(0px);
   opacity: 1;
 }
 
+/* line 553, style.scss */
+.feature-2 .icon {
+  width: 50px;
+  height: 50px;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  -webkit-transform: translateY(-60px);
+      -ms-transform: translateY(-60px);
+          transform: translateY(-60px);
+  opacity: 0;
+}
+/* line 560, style.scss */
+.feature-2 .icon.inview {
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
 @media (min-width: 768px) {
-  /* line 560, style.scss */
+  /* line 573, style.scss */
   .feature-1:nth-child(2) .icon,
   .feature-2:nth-child(2) .icon,
   .feature-2:nth-child(5) .icon,
@@ -720,7 +739,7 @@ p {
             transition: all 1s ease;
   }
 
-  /* line 570, style.scss */
+  /* line 583, style.scss */
   .feature-1:nth-child(3) .icon,
   .feature-2:nth-child(3) .icon,
   .feature-2:nth-child(6) .icon,
@@ -731,14 +750,14 @@ p {
             transition: all 1.5s ease;
   }
 
-  /* line 576, style.scss */
+  /* line 589, style.scss */
   .feature-3:nth-child(5) .icon,
   .feature-3:nth-child(9) .icon {
     -webkit-transition: all 2s ease;
             transition: all 2s ease;
   }
 }
-/* line 582, style.scss */
+/* line 595, style.scss */
 #upgrades {
   -webkit-animation-name: rotate;
           animation-name: rotate;
@@ -795,14 +814,14 @@ p {
             transform: rotate(360deg);
   }
 }
-/* line 596, style.scss */
+/* line 609, style.scss */
 .comex {
   -webkit-transition: all 1s ease;
           transition: all 1s ease;
   opacity: 0.5;
 }
 
-/* line 600, style.scss */
+/* line 613, style.scss */
 .comex.inview {
   opacity: 1;
 }
