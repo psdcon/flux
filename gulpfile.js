@@ -3,13 +3,9 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     compass = require('gulp-compass'),
     prefix = require('gulp-autoprefixer');
-    inject = require('gulp-inject');
     svgmin = require('gulp-svgmin');
     svgstore = require('gulp-svgstore');
 
-function fileContents (filePath, file) {
-  return file.contents.toString('utf8');
-}
 
 gulp.task('watch', function() {
   gulp.watch('css/*.scss', ['compass']);
@@ -25,10 +21,8 @@ gulp.task('connect', function() {
 });
 
 gulp.task('html', function() {
-  var injects = gulp.src(['*.svg'], {read: true});
   gulp
     .src('src/*.html')
-    .pipe(inject(injects, { transform: fileContents })) 
     .pipe(gulp.dest(''))
     .pipe(connect.reload());
 });
