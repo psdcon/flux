@@ -64,7 +64,8 @@
           </button>
 
           <a class="navbar-brand" href="#home">
-            <img src="images/header.png"><!-- <svg class="icon" style="width:153;height:31;"><use xlink:href="#icon-flux-03" /></svg> -->
+            <!-- <img src="images/header.png"> -->
+            <svg class="icon" style="display:inline;width:153;height:31;"><use xlink:href="#icon-flux-03" /></svg>
             <strong>Flux Big Data Systems</strong>
           </a>
         </div><!--/.nav-header -->
@@ -94,8 +95,7 @@
             <div class="row limit">
                 <div class="col-xs-12">
                     <strong>
-                        Unlock the true potential of your <br>business with Flux. 
-                        <!-- <a href="#implementation" class="bg-purple" style="color:black;padding:2px;">How?</a> -->
+                        Unlock the true potential of your <br>business with Flux.
                     </strong>
                 </div>
             </div>
@@ -493,12 +493,12 @@
     
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="bootstrap/js/jquery1.11.1.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <!-- <script src="bootstrap/js/jquery1.11.1.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- Latest compiled and minified JavaScript -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
+    <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         // Smooth scrolling 
         // http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links/
@@ -525,9 +525,8 @@
                 }
             });
         });            
-    </script>
-
-    <script>
+        
+        // Activate scroll based animations
         $(window).scroll(function() {
             $('.icon').each(function(){
                 var imagePos = $(this).offset().top;
@@ -549,8 +548,7 @@
     <script src="jquery.touchslider.min.js"></script>
     <script>
         jQuery(function($) {
-            // if(window.innerWidth < 768)
-            $(".touchslider").touchSlider({/*options*/});
+            $(".touchslider").touchSlider();
         });
     </script>
 </body>

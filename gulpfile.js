@@ -44,6 +44,17 @@ gulp.task('compass', function() {
     .pipe(prefix())
     .pipe(gulp.dest('css'))
     .pipe(connect.reload());
+
+  gulp.src('css/*.scss')
+    .pipe(compass({
+      sass: 'css',
+      image: 'assets',
+      style: 'compressed'
+    })
+    .on('error', gutil.log))
+    .pipe(prefix())
+    .pipe(gulp.dest('production/css'))
+    .pipe(connect.reload());
 });
 
 gulp.task('svg', function () {
