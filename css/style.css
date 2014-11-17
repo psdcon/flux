@@ -15,13 +15,13 @@
 
 @font-face {
   font-family: 'infotext';
-  src: url("fonts/infotext-normal-webfont.tff");
+  src: url("fonts/infotext-normal-webfont.woff");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'infotext';
-  src: url("fonts/infotext-bold-webfont.tff");
+  src: url("fonts/infotext-bold-webfont.woff");
   font-style: normal;
 }
 /* line 39, style.scss */
