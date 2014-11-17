@@ -21,7 +21,6 @@ $tabletWidth    : 768px;
     //      url('fonts/infotext-normal-webfont.ttf') format('truetype'),
     //      url('fonts/infotext-normal-webfont.svg#infotextnormal') format('svg');
     font-weight: normal;
-    font-style: normal;
 }
 @font-face {
     font-family: 'infotext';
@@ -33,7 +32,6 @@ $tabletWidth    : 768px;
     //      url('fonts/infotext-bold-webfont.ttf') format('truetype'),
     //      url('fonts/infotext-bold-webfont.svg#infotextbold') format('svg');
     // font-weight: bold;
-    font-style: normal;
 }
 
 body{
@@ -133,7 +131,8 @@ p{margin:0;}
 // Content
 .flux-banner{
     height: 187px;
-    background: black url('../images/main.jpg') no-repeat;
+    background: black;
+     // url('../images/main.jpg') no-repeat;
     background-size: 100% auto;
     background-position: center top;
     letter-spacing: 1.5px;
