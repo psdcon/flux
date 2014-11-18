@@ -536,7 +536,7 @@ p{margin:0;}
 
 
 // Animation styles
-.feature-1, .not-touchslider .feature-3{
+.feature-1, .feature-2, .not-touchslider .feature-3{
     .icon{
         width: 50px;
         height: 50px;
@@ -549,17 +549,28 @@ p{margin:0;}
         opacity: 1;
     }
 }
+.feature-1{
+    .icon{
+        transform: translateX(-60px);
+    }
+    .icon.inview{
+        transform: translateX(0px);
+    }
+}
 .feature-2 {
     .icon{
-        width: 50px;
-        height: 50px;
-        transition: all 0.5s ease;
         transform: translateY(-60px);
-        opacity: 0;
     }
     .icon.inview{
         transform: translateY(0px);
-        opacity: 1;
+    }
+}
+.not-touchslider .feature-3{
+    .icon{
+        transform: translateX(60px);
+    }
+    .icon.inview{
+        transform: translateX(0px);
     }
 }
 // For staggering animations
