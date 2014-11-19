@@ -346,39 +346,34 @@ p{margin:0;}
         width: 350px;
     }
 }
-.touchslider-prev, .touchslider-next{
-    // border: 2px solid red;
-    display: inline-block;
+.touchslider-buttons{
+    // border: 2px solid red;    
     position: absolute;
-    img{
-        height: 50px;
+    width: calc(100% + 40px);    
+    margin-left: -20px;
+    text-align: center;
+    z-index: 999;
+    @media (min-width: 332px){
+        width: calc(100% + 30px);
+        margin-left: -15px;
+    }
+
+    .button-spacer{
+        // border: 2px solid yellow;
+        display: inline-block;
+        width: 210px;
+        @media (min-width: 350px){
+            width: 258px;
+        }
+        @media (min-width: 460px){
+            width: 320px;
+        }
+        @media (min-width: 535px){
+            width: 440px;
+        }    
     }
 }
-.touchslider-prev{
-    margin-left: -140px;
-    @media (min-width: 350px){
-        margin-left: -170px;
-    }
-    @media (min-width: 430px){
-        margin-left: -200px;
-    }
-    @media (min-width: 535px){
-        margin-left: -247px;
-    }
-}
-.touchslider-next{
-    margin-left: -15px;
-    @media (min-width: 350px){
-        margin-left: -5px;
-    }
-    @media (min-width: 430px){
-        margin-left: 28px;
-    }
-    @media (min-width: 535px){
-        margin-left: 41px;
-    }
-}
-// Nav buttons
+// Navigation indicators/buttons
 .touchslider-nav-item{
     display: inline-block;
     width: 16px;
@@ -541,37 +536,23 @@ p{margin:0;}
         width: 50px;
         height: 50px;
         transition: all 0.5s ease;
-        transform: translateX(-60px);
         opacity: 0;
     }
     .icon.inview{
-        transform: translateX(0px);
         opacity: 1;
     }
 }
 .feature-1{
-    .icon{
-        transform: translateX(-60px);
-    }
-    .icon.inview{
-        transform: translateX(0px);
-    }
+    .icon{transform: translateX(-60px);}
+    .icon.inview{transform: translateX(0px);}
 }
 .feature-2 {
-    .icon{
-        transform: translateY(-60px);
-    }
-    .icon.inview{
-        transform: translateY(0px);
-    }
+    .icon{transform: translateY(-60px);}
+    .icon.inview{transform: translateY(0px);}
 }
 .not-touchslider .feature-3{
-    .icon{
-        transform: translateX(60px);
-    }
-    .icon.inview{
-        transform: translateX(0px);
-    }
+    .icon{transform: translateX(60px);}
+    .icon.inview{transform: translateX(0px);}
 }
 // For staggering animations
 @media (min-width: $tabletWidth){
@@ -603,19 +584,19 @@ p{margin:0;}
     }
 }
 // Continuous rotation of upgrade
-#upgrades{
-    animation-name:             rotate;
-    animation-duration:         5s; 
-    animation-iteration-count:  infinite;
-    animation-timing-function:  ease;
-}
-@keyframes rotate {
-    0%{transform: rotate(0deg);}
-    25%{transform: rotate(0deg);}
-    50%{transform: rotate(180deg);}
-    75%{transform: rotate(180deg);}
-    100%{transform: rotate(360deg);}
-}
+// #upgrades{
+//     animation-name:             rotateIcon;
+//     animation-duration:         5s; 
+//     animation-iteration-count:  infinite;
+//     animation-timing-function:  ease;
+// }
+// @keyframes rotateIcon {
+//     0%{transform: rotateX(0deg);}
+//     25%{transform: rotateX(0deg);}
+//     50%{transform: rotateX(180deg);}
+//     75%{transform: rotateX(180deg);}
+//     100%{transform: rotateX(360deg);}
+// }
 // Fading in of comex logo
 .comex{
     transition: all 1s ease;
